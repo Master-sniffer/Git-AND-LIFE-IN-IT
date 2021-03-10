@@ -19,5 +19,6 @@ while True:
         print ("ima about to break")
         break
     conn.send(data.upper())
+    conn.send(msg.lower())
 print ("closing connection")
-conn.close
+conn.close()
