@@ -31,7 +31,7 @@ class T(threading.Thread):
 # sock = socket.socket()
 # sock.bind(('', 9090))
 
-while True:
+while True: # можно поставить таймер
 
     # YOU CAN DO THIS WAY
     lis = []  # Base with users
