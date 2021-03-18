@@ -12,7 +12,7 @@ class T(threading.Thread):
         threading.Thread.__init__(self, name="t" + n)
         self.n = n
 
-    def run(self):  # fucking bullshit
+    def run(self):  # write a respond to the client
         print("Процесс", self.n)
 
     def write(self,conn):
@@ -28,15 +28,15 @@ class T(threading.Thread):
 
 #OR YOU CAN DO THIS WAY
 # lis = []  # Base with users
-# sock = socket.socket()
-# sock.bind(('', 9090))
+sock = socket.socket()
+sock.bind(('', 9090))
 
 while True: # можно поставить таймер
 
     # YOU CAN DO THIS WAY
     lis = []  # Base with users
-    sock = socket.socket()
-    sock.bind(('', 9090))
+#    sock = socket.socket()
+#    sock.bind(('', 9090))
     sock.listen(5)
     conn, addr = sock.accept()
     print(addr[0])
