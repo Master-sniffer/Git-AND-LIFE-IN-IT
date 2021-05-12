@@ -1,3 +1,5 @@
+#!/bin/bash
+
 import asyncio
 
 
@@ -14,10 +16,13 @@ async def tcp_echo_client(host, port):
 
     data = await reader.read(100)
     writer.close()
-    # await writer.wait_closed()
+    print (data)
+    await writer.wait_closed()
 
-# asyncio.run(tcp_echo_client(HOST, PORT))
+asyncio.run(tcp_echo_client(HOST, PORT))
 
-loop = asyncio.get_event_loop()
+#loop = asyncio.get_event_loop()
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
 task = loop.create_task(tcp_echo_client(HOST, PORT))
 loop.run_until_complete(task)
