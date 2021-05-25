@@ -1,0 +1,161 @@
+sudo apt update
+
+sudo apt install apache2
+
+sudo systemctl status apache2
+
+sudo mkdir -p /var/www/dedenko.com
+
+sudo mkdir -p /var/www/dedenko.com/public_html
+
+ls -la /var/www
+
+ ls -la /var/www/dedenko.com/
+
+ sudo nano /var/www/dedenko.com/public_html/index.html
+
+ sudo chown -R www-data: /var/www/dedenko.com
+
+ sudo chmod -R 755 /var/www/dedenko.com
+
+ sudo nano /etc/apache2/sites-available/dedenko.com.conf
+
+ sudo a2ensite dedenko.com
+
+ sudo apachectl configtest
+
+ sudo nano /etc/apache2/sites-available/dedenko.com.conf
+
+ sudo apachectl configtest
+
+ sudo systemctl restart apache2
+
+ sudo nano /etc/hosts
+
+ sudo a2dissite 000-default.conf
+
+ sudo systemctl restart apache2
+
+ cat /etc/apache2/sites-available/dedenko.com.conf
+
+ exit
+
+ shutdown -P now
+
+ nano index.html
+
+ cat hosts
+
+ sudo nano /etc/hosts
+
+ ls
+
+ sudo systemctl status apache2
+
+ sudo mkdir -p /var/www/a1.com/public_html
+
+ sudo cp index.html /var/www/с3.com/public_html/index.html
+
+ sudo cp index.html /var/www/a1.com/public_html/index.html
+
+ sudo chown -R www-data:www-data /var/www/c3.com
+
+ sudo chown -R www-data:www-data /var/www/a1.com
+
+ sudo chmod -R 755 /var/www/a1.com
+
+ nano c3.com.conf
+
+ sudo cp a1.com.conf /etc/apache2/sites-available/
+
+
+ sudo mkdir ssl ; cd ssl
+
+ openssl version
+
+ sudo openssl req -new -x509 -days 1461 -nodes -out cert.pem -keyout cert.key -subj "/C=RU/ST=SPb/L=SPb/O=Global Security/OU=IT Department/CN=test.fa.local/CN=test"
+
+
+ nano a1.com.conf
+
+290 nano ~/a1.com.conf
+
+291 sudo a2enmod ssl
+
+292 sudo a2enmod rewrite
+
+293 sudo a2ensite a1.com
+
+294 sudo apachectl configtest
+
+295 sudo systemctl restart apache2
+
+296 cat /etc/hosts
+
+297 cd
+
+298 sudo nano /etc/apache2/sites-available/a1.com.conf
+
+299 sudo systemctl restart apache2
+
+300 sudo apt install lynx
+
+301 lynx http://www.a1.com
+
+302 lynx http://www.fa.ru
+
+303 mc
+
+304 sudo apt install mc
+
+305 mc
+
+306 select-editor
+
+307 mc
+
+308 cat /etc/hosts
+
+309 sudo nano /etc/hosts
+
+310 nano index.html
+
+311 history > hist.txt
+
+312 sudo a2ensite 000-default.conf
+
+313 sudo systemctl restart apache2
+
+314 sudo mkdir -p /var/www/b2.com/public_html
+
+315 sudo cp index.html /var/www/b1.com/public_html/index.html
+
+316 sudo cp index.html /var/www/b2.com/public_html/
+
+317 sudo chown -R www-data:www-data /var/www/b2.com
+
+318 sudo chmod -R 755 /var/www/b2.com/
+
+319 sudo chown -R www-data:www-data /var/www/b2.com/
+
+320 sudo chmod -R 755 /var/www/b2.com/
+
+321 nano c3.com.conf
+
+322 ls
+
+323 sudo cp b2.com.conf /etc/apache2/sites-available/
+
+324 sudo a2ensite b2.com
+
+325 sudo systemctl restart apache2
+
+326 sudo nano /etc/apache2/ports.conf
+
+327 sudo nano /etc/apache2/sites-available/b2.com.conf
+
+328 sudo systemctl restart apache2
+
+329 hostname -i
+
+330 hostname -I
